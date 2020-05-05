@@ -644,6 +644,7 @@ moonlibrary_chars = {
 }
 
 
+#ignore this😄😡😍😰👿👮💩🙈🌞🚀⚡🐱🐶🐼👻💗⭐
 
 def libtotemplate(library: dict) -> dict:
     '''converts tsukimoji into templates'''
@@ -762,16 +763,7 @@ def emojitextgen(word: str, base: str) -> None:
             pass
     print('\ndeveloped by Damon Bernard')
 
-        
 
-
-
-#example emoji bases
-moon_base = {1: "🌑", 2: "🌒", 3:"🌓", 4: "🌔", 5: "🌕", 6:"🌘", 7:"🌗", 8 : "🌖"}
-example_base = {1: "😡", 2: "😡", 3:"😡", 4: "😫", 5: "😫", 6:"😫", 7:"😫", 8 : "😫"}
-heart_star_base = {1: '💗', 2: '💗', 3: '💗', 4: '⭐', 5: '⭐', 6: '💗', 7: '💗', 8: '⭐'}
-
-#😄😡😍😰👿👮💩🙈🌞🚀⚡🐱🐶🐼👻💗⭐
 
 def quickbase() -> dict:
     emoji1 = input("Paste a background emoji:")
@@ -779,7 +771,27 @@ def quickbase() -> dict:
     base = {1: emoji1, 2: emoji1, 3:emoji1, 4: emoji2, 5: emoji2, 6:emoji1, 7:emoji1, 8 : emoji2}
     return base
 
+
+
+############################################################################3
+
+
+#example emoji bases, you can create your own bases
+moon_base = {1: "🌑", 2: "🌒", 3:"🌓", 4: "🌔", 5: "🌕", 6:"🌘", 7:"🌗", 8 : "🌖"}
+inverted_moon_base = {1: "🌕", 2: "🌖", 3:"🌗", 4: "🌘", 5: "🌑", 6:"🌔", 7:"🌓", 8 : "🌒"}
+example_base = {1: "😡", 2: "😡", 3:"😡", 4: "😫", 5: "😫", 6:"😫", 7:"😫", 8 : "😫"}
+heart_star_base = {1: '💗', 2: '💗', 3: '💗', 4: '⭐', 5: '⭐', 6: '💗', 7: '💗', 8: '⭐'}
+
+
+#If you need a quick base use the quickbase() function, uncomment the following line
 #custom_base = quickbase()
 
+
+#This asks for a word
 word = get_word()
+
+#This prints the word given a base
 emojitextgen(word, moon_base)
+emojitextgen(word, inverted_moon_base)
+emojitextgen(word, heart_star_base)
+emojitextgen(word, example_base)
